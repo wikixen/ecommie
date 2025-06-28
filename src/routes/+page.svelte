@@ -1,2 +1,20 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+  import Header from "./Header.svelte";
+
+  
+</script>
+
+<main>
+  <Header />
+</main>
+
+
+<style>
+  :global(body) {
+    margin: 0;
+  }
+  main{
+    padding-inline: 2rem;
+    padding-block: 1rem;
+  }
+</style>
