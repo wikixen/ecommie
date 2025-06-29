@@ -36,6 +36,35 @@
 {#snippet ProductCard(product: Product)}
   <article>
     <img src={product.image} alt={product.description}>
-
+    <div>
+      <p class="title">{product.title.length > 30 ? product.title.slice(0,30)+"..." : product.title}</p>
+      <p class="price">{"$" + product.price}</p>
+    </div>
   </article>
 {/snippet}
+
+<style>
+  section{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+  }
+  article{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: .75rem;
+    border: 1px solid black;
+    border-radius: .25rem;
+    cursor: pointer;
+  }
+  img {
+    width: 15rem;
+  }
+  p {
+    margin: 0;
+  }
+  .title {
+    font-size: large;
+  }
+</style>
